@@ -1,0 +1,15 @@
+.card{
+    border: 1px solid black;
+}
+
+.card-title{
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    color: yellowgreen;
+}
+
+.card img{
+    width: auto;
+    height: 300px;
+}
