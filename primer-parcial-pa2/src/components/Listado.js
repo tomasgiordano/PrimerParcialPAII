@@ -8,7 +8,7 @@ export const Listado = () => {
     const [personajes,setPersonajes] = useState([]);
 
     useEffect(()=>{
-        const URL = 'https://gateway.marvel.com:443/v1/public/characters?apikey=c9e912b5d198a5629436ff17f8826d41&hash=36d418c4e427fc15b039134ae399a4e1&ts=1';
+        const URL = 'https://gateway.marvel.com:443/v1/public/characters?limit=100&apikey=c9e912b5d198a5629436ff17f8826d41&hash=36d418c4e427fc15b039134ae399a4e1&ts=1';
 
         const fetching = async () => {
             try {
