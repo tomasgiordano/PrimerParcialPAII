@@ -2,7 +2,8 @@ import React from 'react';
 import logo from '../assets/marvelLogo.png'
 import '../stylesheets/Header.css'
 
-const Header = () =>{
+const Header = ({busqueda, setBusqueda}) =>{
+
     return (
         <header>
             <div className='imagen'>
@@ -10,8 +11,8 @@ const Header = () =>{
                 <h1>Characters</h1>
             </div>
             <form>
-	            <label htmlFor="search">Search</label>
-	            <input id="search" type="search" autoComplete="off" required/>
+	            <label htmlFor="search">Search</label> 
+	            <input id="search" type="search" autoComplete="off" pattern=".*\S.*" required value={busqueda} onChange={(e) => { setBusqueda(e.target.value)}}/>
 	            <span className="caret"></span>
             </form>
         </header>
