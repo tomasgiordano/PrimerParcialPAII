@@ -21,7 +21,7 @@ export const Listado = ({busqueda}) => {
 
                 let arrResults = [];
 
-                results.forEach(({id,name,thumbnail})=>{
+                results.forEach(({id,name,thumbnail,description,urls})=>{
                     var path = ""
 
                         if(thumbnail != null)
@@ -32,6 +32,8 @@ export const Listado = ({busqueda}) => {
                             id: id,
                             name: name,
                             avatar: path,
+                            description: description,
+                            urls: urls
                         });
                 })
                 setPersonajes(arrResults);

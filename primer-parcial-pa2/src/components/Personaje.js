@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import '../stylesheets/Personaje.css'
 import Modal from './Modal';
+import Ventana from './Ventana';
 
 const Personaje = ({personaje}) => {
 
@@ -14,11 +15,7 @@ const Personaje = ({personaje}) => {
                 <figcaption className='card-title'>{name}</figcaption>
             </figure>
             <Modal open={open} setOpen={setOpen}>
-                <div>
-                    <h1>
-                        {name}
-                    </h1>
-                </div>
+                <Ventana setOpen={setOpen} personaje={personaje}/>
             </Modal>
         </>
      );
